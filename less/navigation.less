@@ -1,0 +1,55 @@
+// Navigation
+
+.logo-content {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+header {
+    .fixedNav;
+
+    menu {
+        .custom-layout(center);
+        padding: 50px 0 49px;
+        position: relative;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        height: 92px;
+
+        .check-mark {
+            width: 70px;
+            height: 50px;
+        }
+
+        .logo {
+            .custom-layout(center);
+            flex-wrap: wrap;
+            font-size: 5rem;
+            padding-left: 10px;
+        }    
+
+        nav {
+            .custom-layout(space-evenly);
+            width: 100%;
+            align-items: center;
+            
+            a {
+                text-decoration: none;
+                font-size: 1.5rem;
+                font-family: 'Cinzel', serif;
+                color: white;
+
+                @media only screen and (max-width: 400px) {
+                    font-size: 0.7rem;
+                }
+            }
+
+            a:hover {
+                color: orange;
+            }
+
+        }
+    }   
+}   
