@@ -187,12 +187,6 @@ p {
   justify-content: center;
   padding-bottom: 5px;
 }
-header {
-  overflow: hidden;
-  position: fixed;
-  opacity: 0.9;
-  width: 100%;
-}
 header menu {
   display: flex;
   justify-content: center;
@@ -207,12 +201,23 @@ header menu .check-mark {
   width: 70px;
   height: 50px;
 }
+@media only screen and (max-width: 800px) {
+  header menu .check-mark {
+    width: 50px;
+    height: 25px;
+  }
+}
 header menu .logo {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   font-size: 5rem;
   padding-left: 10px;
+}
+@media only screen and (max-width: 800px) {
+  header menu .logo {
+    font-size: 3rem;
+  }
 }
 header menu nav {
   display: flex;
@@ -226,7 +231,7 @@ header menu nav a {
   font-family: 'Cinzel', serif;
   color: white;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 800px) {
   header menu nav a {
     font-size: 0.7rem;
   }
@@ -247,9 +252,8 @@ footer p {
 }
 .header-img {
   display: block;
-  padding-top: 55px;
   width: 100%;
-  height: 80vh;
+  height: 60vh;
   transition: all 5000ms;
 }
 @media only screen and (max-width: 400px) {
@@ -339,7 +343,7 @@ footer p {
   width: 90%;
   position: absolute;
   text-align: center;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -350,7 +354,7 @@ footer p {
 }
 @media only screen and (max-width: 800px) {
   .call-to-action {
-    top: 30%;
+    top: 42%;
   }
 }
 .call-to-action h2 {
@@ -358,18 +362,23 @@ footer p {
   font-size: 3.5rem;
   color: white;
 }
+@media only screen and (max-width: 400px) {
+  .call-to-action h2 {
+    font-size: 2.5rem;
+  }
+}
 .call-to-action p {
   color: white;
   font-family: 'Cinzel', serif;
 }
 .call-to-action .register {
   margin: 20px;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-family: 'Ubuntu', sans-serif;
 }
 @media only screen and (max-width: 400px) {
   .call-to-action .register {
-    width: 160px;
+    width: 110px;
   }
 }
 .featured-images {
@@ -378,9 +387,9 @@ footer p {
   justify-content: center;
 }
 .featured-images img {
-  width: 324px;
+  width: 315px;
   height: 250px;
-  margin: 1px;
+  margin: 5px;
   border-radius: 15px;
   transition: all 600ms;
 }
@@ -406,9 +415,6 @@ footer p {
   margin: 3px;
   height: fit-content;
   border-radius: 15px;
-}
-.bottom-content .activities .activity p {
-  color: orange;
 }
 .bottom-content h3 {
   margin-top: 11px;
@@ -473,7 +479,6 @@ footer p {
 }
 .contact-header-img {
   display: block;
-  padding-top: 55px;
   width: 100%;
   height: 50vh;
   transition: all 5000ms;
@@ -481,20 +486,56 @@ footer p {
 hr {
   margin: 10px 0 10px;
 }
-.about-content {
-  padding: 150px 0 0;
-}
 .team-members {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px 0 50px;
+  padding-top: 50px;
 }
-.team-members .member {
-  background-color: lightblue;
-  width: 315px;
-  height: 250px;
-  margin: 4px;
+.team-members img {
+  width: 270px;
+  height: 300px;
+  margin: 5px;
   border-radius: 15px;
   transition: all 600ms;
+}
+.about-title {
+  padding-top: 50px;
+  text-align: center;
+}
+.profile {
+  text-align: center;
+  margin: 20px;
+}
+.profile h2 {
+  font-size: 1.8rem;
+}
+.profile h3 {
+  font-size: 1.8rem;
+}
+.member-info {
+  width: 270px;
+  padding: 0 20px 40px;
+}
+.git-button {
+  border: 1px solid gray;
+  padding: 10px 10px;
+  text-align: center;
+  width: 180px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: all 600ms;
+  margin-top: 20px;
+}
+@media only screen and (max-width: 400px) {
+  .git-button {
+    padding: 5px 5px;
+    width: 100px;
+  }
+}
+.git-button:hover {
+  border: 1px solid orange;
+  color: orange;
+  transform: scale(1.1);
 }

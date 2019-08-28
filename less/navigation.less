@@ -7,7 +7,6 @@
 }
 
 header {
-    .fixedNav;
 
     menu {
         .custom-layout(center);
@@ -21,6 +20,11 @@ header {
         .check-mark {
             width: 70px;
             height: 50px;
+
+            @media only screen and (max-width: 800px) {
+                width: 50px;
+                height: 25px;
+            }
         }
 
         .logo {
@@ -28,6 +32,10 @@ header {
             flex-wrap: wrap;
             font-size: 5rem;
             padding-left: 10px;
+
+            @media only screen and (max-width: 800px) {
+                font-size: 3rem;
+            }
         }    
 
         nav {
@@ -41,7 +49,7 @@ header {
                 font-family: 'Cinzel', serif;
                 color: white;
 
-                @media only screen and (max-width: 400px) {
+                @media only screen and (max-width: 800px) {
                     font-size: 0.7rem;
                 }
             }
