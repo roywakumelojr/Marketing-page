@@ -1,0 +1,25 @@
+// Mixins Here
+
+// custom button
+.custom-btn {
+    padding:10px 10px;
+    width: 150px;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    text-align: center;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        background-color: white;
+        color: #22283A;
+        border: 1px solid orange;
+    }
+}
+
+// display layout (Parametric MixIn)
+.custom-layout (@justify) {
+    display: flex;
+    justify-content: @justify;
+}
