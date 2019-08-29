@@ -13,12 +13,6 @@
   color: #22283A;
   border: 1px solid orange;
 }
-.fixedNav {
-  overflow: hidden;
-  position: fixed;
-  opacity: 0.9;
-  width: 100%;
-}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -172,9 +166,10 @@ h3 {
   font-size: 2.4rem;
 }
 p {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.4;
   color: darkslategray;
+  padding-top: 5px;
 }
 .container {
   max-width: 980px;
@@ -190,16 +185,20 @@ p {
 header menu {
   display: flex;
   justify-content: center;
-  padding: 50px 0 49px;
-  position: relative;
+  overflow: hidden;
+  padding: 50px 0 44px;
+  position: fixed;
+  z-index: 2;
   flex-direction: column;
   background-color: black;
   width: 100%;
   height: 92px;
+  align-items: center;
+  opacity: 0.9;
 }
 header menu .check-mark {
-  width: 70px;
-  height: 50px;
+  width: 60px;
+  height: 35px;
 }
 @media only screen and (max-width: 800px) {
   header menu .check-mark {
@@ -211,7 +210,7 @@ header menu .logo {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  font-size: 5rem;
+  font-size: 4rem;
   padding-left: 10px;
 }
 @media only screen and (max-width: 800px) {
@@ -222,7 +221,7 @@ header menu .logo {
 header menu nav {
   display: flex;
   justify-content: space-evenly;
-  width: 100%;
+  width: 90%;
   align-items: center;
 }
 header menu nav a {
@@ -250,21 +249,22 @@ footer {
 footer p {
   color: white;
 }
-.header-img {
-  display: block;
+.hero {
+  height: 70vh;
   width: 100%;
-  height: 60vh;
+  padding-top: 50px;
+}
+.hero .hero-image {
+  background: url(img/0.jpg);
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 70vh;
+  left: 0;
   transition: all 5000ms;
 }
-@media only screen and (max-width: 400px) {
-  .header-img {
-    height: 55vh;
-  }
-}
-@media only screen and (max-width: 800px) {
-  .header-img {
-    height: 50vh;
-  }
+.cloud-box {
+  padding-top: 50px;
 }
 .register {
   border: 1px solid white;
@@ -287,7 +287,7 @@ footer p {
   transform: scale(1.1);
 }
 .process {
-  margin: 60px 0 40px;
+  margin: 100px 0 5px;
 }
 .view-more-div {
   margin-top: 20px;
@@ -296,7 +296,7 @@ footer p {
 .view-more-div .view-more {
   font-family: 'Cinzel', serif;
   margin-top: 20px;
-  border: 1px solid black;
+  border: 1px solid orange;
   padding: 10px 10px;
   text-align: center;
   border-radius: 15px;
@@ -318,9 +318,9 @@ footer p {
 .process .steps {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: 280px;
   align-items: center;
-  margin: 20px;
+  margin: 35px;
   height: fit-content;
   border-radius: 15px;
   text-align: center;
@@ -370,6 +370,7 @@ footer p {
 .call-to-action p {
   color: white;
   font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
 }
 .call-to-action .register {
   margin: 20px;
@@ -407,20 +408,26 @@ footer p {
   justify-content: center;
 }
 .bottom-content .activities .activity {
-  border: 1px solid lightgray;
+  border: 1px solid orange;
   display: flex;
   flex-direction: column;
-  width: 235px;
+  width: 225px;
   align-items: center;
-  margin: 3px;
+  margin: 8px;
   height: fit-content;
-  border-radius: 15px;
+  border-radius: 10px;
+  transition: all 600ms;
+}
+.bottom-content .activities .activity:hover {
+  border: 1px solid orange;
+  transform: scale(1.1);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 .bottom-content h3 {
   margin-top: 11px;
 }
 .bottom-content p {
-  margin-top: 13px;
+  margin: 13px;
 }
 @media only screen and (max-width: 1000px) {
   .bottom-content {
@@ -480,7 +487,8 @@ footer p {
 .contact-header-img {
   display: block;
   width: 100%;
-  height: 50vh;
+  height: 60vh;
+  padding-top: 50px;
   transition: all 5000ms;
 }
 hr {
@@ -490,7 +498,6 @@ hr {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 50px;
 }
 .team-members img {
   width: 270px;
@@ -500,8 +507,7 @@ hr {
   transition: all 600ms;
 }
 .about-title {
-  padding-top: 50px;
-  text-align: center;
+  padding-top: 100px;
 }
 .profile {
   text-align: center;
@@ -519,14 +525,13 @@ hr {
 }
 .git-button {
   border: 1px solid gray;
-  padding: 10px 10px;
+  padding: 5px 5px;
   text-align: center;
-  width: 180px;
-  font-size: 1.5rem;
+  width: 120px;
+  font-size: 1.2rem;
   cursor: pointer;
   border-radius: 15px;
   transition: all 600ms;
-  margin-top: 20px;
 }
 @media only screen and (max-width: 400px) {
   .git-button {
